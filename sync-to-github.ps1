@@ -3,10 +3,10 @@
 # 此脚本帮助您将WordPress静态站点推送到GitHub仓库
 
 Write-Host "=== WordPress静态站点GitHub同步工具 ==="
-Write-Host "请按照提示输入您的GitHub仓库信息。"
 
-# 获取GitHub仓库URL
-$repoUrl = Read-Host -Prompt "请输入您的GitHub仓库URL (例如: https://github.com/用户名/仓库名.git)"
+# 默认GitHub仓库URL
+$repoUrl = "https://github.com/afdk1991/conWordPress.git"
+Write-Host "使用默认仓库地址: $repoUrl"
 
 # 检查URL格式是否正确
 if (-not ($repoUrl -match '^https://github.com/.*\.git$')) {
